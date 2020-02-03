@@ -11,11 +11,14 @@ echo("___________________________________".PHP_EOL);
 $TotalPrice = $product[0][2] + $product[1][2] + $product[2][2];
 $operator = sizeof($product);
 $AveragePrice = $TotalPrice / $operator;
-echo($AveragePrice);
 $AvrgPriceFormat = round($AveragePrice, 2);
-echo("Gemiddelde Prijs: €". $AvrgPriceFormat);
-$totalStrlength = strlen($product[0][0]) + strlen($product[1][0]) + strlen($product[2][0]);
-echo($totalStrlength);
+echo("Gemiddelde Prijs: €". $AvrgPriceFormat.PHP_EOL);
+$strlength1 = strlen($product[0][0]);
+$strlength2 = strlen($product[1][0]);
+$strlength3 = strlen($product[2][0]);
+$totalStrlength = $strlength1 + $strlength2 + $strlength3;
+$AvrgStrlength = $totalStrlength / $operator;
+echo("Gemiddelde lengte van titel: ".$AvrgStrlength." karakters");
 
 
 
